@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,17 +14,27 @@
       color: #1a1a1a;
     }
     header {
-      background-color: #002b5c;
-      color: white;
-      padding: 1rem;
-      text-align: center;
+      background-color: #ffffff;
+      color: #002b5c;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 4px solid #002b5c;
+    }
+    header img {
+      height: 60px;
+    }
+    .lang-toggle {
+      font-size: 0.9rem;
     }
     nav ul {
       list-style: none;
       padding: 0;
+      margin: 0;
       display: flex;
       justify-content: center;
-      background-color: #004080;
+      background-color: #002b5c;
     }
     nav ul li {
       margin: 0 1rem;
@@ -33,117 +42,136 @@
     nav ul li a {
       color: white;
       text-decoration: none;
+      font-weight: bold;
+      padding: 1rem;
+      display: inline-block;
+    }
+    nav ul li a:hover {
+      background-color: #004080;
+    }
+    .banner {
+      background: url('https://source.unsplash.com/1600x600/?teamwork,business') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .banner p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    .banner button {
+      background-color: #c8102e;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
     }
     section {
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
     }
-    .banner {
-      background: url('https://source.unsplash.com/featured/?business,america') center/cover no-repeat;
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
+    .full-width {
+      grid-column: span 2;
     }
     .card {
       background: white;
-      padding: 1.5rem;
-      margin: 1rem 0;
+      padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     footer {
       background-color: #002b5c;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: 2rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #002b5c;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      cursor: pointer;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Coalición de Negocios del Norte de Virginia</h1>
-    <p><em>Versión Bilingüe / Bilingual Version</em></p>
+    <img src="./1765986153976blob.jpg" alt="Logo de la Coalición" />
+    <div class="lang-toggle">
+      <a href="index.html">Español</a> | <a href="index-en.html">English</a>
+    </div>
   </header>
 
   <nav>
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#quienes">Quiénes Somos</a></li>
-      <li><a href="#eventos">Eventos</a></li>
-      <li><a href="#afiliate">Afíliate</a></li>
-      <li><a href="#recursos">Recursos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes.html">Quiénes Somos</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="afiliate.html">Afíliate</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
 
-  <div class="banner" id="inicio">
-    <h2>Bienvenidos</h2>
-    <p>Unificando negocios, fortaleciendo comunidades</p>
+  <div class="banner">
+    <h2>Bienvenidos a la Coalición de Negocios del Norte de Virginia</h2>
+    <p>Somos una organización dedicada a unificar y fortalecer los negocios del norte de Virginia mediante eventos informativos y colaboración activa con autoridades locales.</p>
+    <button>ÚNETE A LA COALICIÓN</button>
   </div>
 
-  <section id="quienes">
+  <section>
     <div class="card">
-      <h2>Misión</h2>
-      <ul>
-        <li>Unificar y fortalecer negocios del Norte de Virginia organizando seminarios y eventos informativos.</li>
-        <li>Conectar con autoridades locales y capacitar en cumplimiento normativo y prácticas responsables.</li>
-        <li>Apoyar proyectos comunitarios afines.</li>
-      </ul>
-      <h2>Visión</h2>
-      <p>Ser la institución líder de los negocios en el Norte de Virginia mediante el intercambio de conocimientos y mejores prácticas.</p>
+      <h2>Quiénes Somos</h2>
+      <p>Nuestra misión es unificar y capacitar a los negocios del norte de Virginia fomentando el intercambio de conocimientos y mejores prácticas mediante eventos y seminarios, en colaboración con autoridades locales.</p>
+      <button>Descubre Más</button>
     </div>
-
-    <div class="card">
-      <h2>Liderazgo</h2>
-      <p><strong>Director Ejecutivo:</strong> Oscar Amaya</p>
-      <p><strong>Secretaria:</strong> Norma Margulies</p>
-      <p><strong>Junta Consultiva:</strong></p>
-      <ul>
-        <li>Milton Moreno</li>
-        <li>Juan Flores</li>
-        <li>Jose Castillo</li>
-        <li>Estefany Espinoza</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="eventos">
     <div class="card">
       <h2>Próximos Eventos</h2>
       <ul>
-        <li>Seminario de Cumplimiento Normativo - 10 de abril</li>
-        <li>Networking Empresarial - 11 de abril</li>
-        <li>Capacitación en Marketing Digital - 20 de abril</li>
+        <li>Seminario de Cumplimiento Normativo - 10 abril</li>
+        <li>Networking Empresarial - 11 abril</li>
+        <li>Capacitación en Marketing Digital - 20 abril</li>
       </ul>
+      <button>VER CALENDARIO</button>
     </div>
-  </section>
-
-  <section id="afiliate">
     <div class="card">
-      <h2>Afíliate</h2>
-      <p>Inscríbete para formar parte de nuestra comunidad empresarial.</p>
-      <button>Formulario de inscripción</button>
+      <h2>Afíliate a la Coalición</h2>
+      <p>Fortalece tu negocio afiliándote a nuestra organización y accede a muchos beneficios y recursos.</p>
+      <button>INSCRÍBETE HOY</button>
     </div>
-  </section>
-
-  <section id="recursos">
     <div class="card">
       <h2>Recursos y Noticias</h2>
-      <p>Documentos útiles, enlaces y últimas actualizaciones del sector.</p>
-      <button>Ver Recursos</button>
-      <button>Leer Noticias</button>
+      <p>Descubre recursos útiles y mantente informado con nuestras últimas noticias.</p>
+      <button>VER RECURSOS</button>
+      <button>LEER NOTICIAS</button>
     </div>
-  </section>
-
-  <section id="contacto">
-    <div class="card">
+    <div class="card full-width">
       <h2>Contáctanos</h2>
       <form>
-        <input type="text" placeholder="Nombre" required /><br /><br />
-        <input type="email" placeholder="Correo electrónico" required /><br /><br />
-        <textarea placeholder="Mensaje" rows="4" required></textarea><br /><br />
-        <button type="submit">Enviar</button>
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Mensaje" rows="4" required></textarea>
+        <button type="submit">ENVIAR MENSAJE</button>
       </form>
     </div>
   </section>
